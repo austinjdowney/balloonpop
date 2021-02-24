@@ -3,10 +3,15 @@
     --bg: rgb(224, 217, 217);
     --shadow: 2px, 0, 8x rgba(0,0,0,.3);
     --corners: 4px;
+    --text-color: #3a3838;
+    --light:  rgb(253,253,253);
 }
 
 body{
     background-color: var(--bg);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16pt;
+    color: var(--text-color);
 }
 
 header{
@@ -15,6 +20,15 @@ header{
 
 img{
     max-width: 100%;
+}
+
+button{
+    background-color: var(--primary);
+    color: var(--light);
+    border: 1px solid  #3a3838;
+    border-radius: var(--corners);
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
 }
 
 .balloon{
@@ -30,7 +44,7 @@ img{
 }
 
 .card{
-    background-color: white;
+    background-color: var(--light);
     padding: 1em;
     box-shadow: var(--shadow);
     border-radius: var(--corners);
@@ -40,6 +54,14 @@ img{
     --filter: drop-shadow(var(--shadow));
 }
 
+
+.d-flex{
+    display:flex;
+}
+
+.space-between{
+    justify-content: space-between;
+}
 .hidden{
     display: none !important;
 }
