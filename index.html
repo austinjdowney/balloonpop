@@ -33,7 +33,7 @@
 
         <!-- TODO replace hidden class-->
 
-        <section id="game" class="game hidden">
+        <section id="game" class="game">
 
             <div class="card bg-dark text-light">
                 <div class="d-flex space between">
@@ -48,30 +48,30 @@
                 </div>
             </div>
 
-            <div>
-                <button onclick="changePlayer()">Change Player:</button>
-            </div>
-            <div>
+            <div id="main-controls" class="d-flex space-around mt-2">
+                <button class="btn-dark" onclick="changePlayer()">Change Player:</button>
                 <button id="start-button" onclick="startGame()">START GAME</button>
             </div>
+            <!--TODO replace hidden class -->
+            <div id="game-controls" class="">
+                <button id="inflate-button" onclick="inflate()">
+                    Inflate
+                    <span id="click-count"></span>
+                </button>
 
-            <button id="inflate-button" onclick="inflate()" disabled="true">
-                Inflate
-                <span id="click-count"></span>
-            </button>
 
+                <div>
+                    <span>Balloons Popped:</span>
+                    <span id="pop-count">0</span>
+                </div>
 
-            <div>
-                <span>Balloons Popped:</span>
-                <span id="pop-count">0</span>
+                <div>
+                    <span>Time Remaining:</span>
+                    <span id="countdown">0</span>
+                </div>
+
+                <div id="balloon" class="balloon"></div>
             </div>
-
-            <div>
-                <span>Time Remaining:</span>
-                <span id="countdown">0</span>
-            </div>
-
-            <div id="balloon" class="balloon"></div>
         </section>
 
         <script src="main.js"></script>
