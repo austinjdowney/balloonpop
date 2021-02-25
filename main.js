@@ -151,7 +151,7 @@ function loadPlayers() {
 }
 
 function drawScoreboard() {
-    let template = {}
+    let template = ""
 
     players.sort((p1, p2) => p2.topSCore - p1.topScore)
 
@@ -162,7 +162,7 @@ function drawScoreboard() {
             <i class="fa fa-user"></i>
             ${player.name}
             </span>
-            <span>score ${player.topScore} </span>
+            <span> score: ${player.topScore}</span>
         </div>
         `
     })
